@@ -41,29 +41,29 @@
 #define USE_VCP
 
 #define USE_UART1
-#define UART1_TX_PIN            PA9
-#define UART1_RX_PIN            PA10
+#define UART1_TX_PIN            PA9         //(2,7,4)
+#define UART1_RX_PIN            PA10        //(2,2,4)
 
 #define USE_UART2
-#define UART2_TX_PIN            PA2
-#define UART2_RX_PIN            PA3
+#define UART2_TX_PIN            PA2      //(1,5,4)
+#define UART2_RX_PIN            PA3      //(1,6,4)
 
 #define USE_UART3
-#define UART3_TX_PIN            PC10
-#define UART3_RX_PIN            PC11
+#define UART3_TX_PIN            PC10     //(1,3,4)
+#define UART3_RX_PIN            PC11     //(1,1,4)
 
 // Internally routed to Bluetooth
 #define USE_UART4
-#define UART4_TX_PIN            PA0
-#define UART4_RX_PIN            PA1 
+#define UART4_TX_PIN            PA0      //(1,4,4)
+#define UART4_RX_PIN            PA1      //(1,2,4)
 
 #define USE_UART5
-#define UART5_TX_PIN            PC12    // Not broken out
-#define UART5_RX_PIN            PD2     //ESC TLM
+#define UART5_TX_PIN            PC12    // Not broken out  //(1,7,4)
+#define UART5_RX_PIN            PD2     //ESC TLM            //(1,0,4)
 
 #define USE_UART6
-#define UART6_TX_PIN            PC6
-#define UART6_RX_PIN            PC7
+#define UART6_TX_PIN            PC6      //(2,7,5)
+#define UART6_RX_PIN            PC7      //(2,2,5)
 
 #define USE_SOFTSERIAL1
 #define SOFTSERIAL_1_TX_PIN      PA2
@@ -81,32 +81,32 @@
 #define USE_SPI
 #define USE_SPI_DEVICE_1
 #define SPI1_SCK_PIN            PA5
-#define SPI1_MISO_PIN           PA6
-#define SPI1_MOSI_PIN           PA7
+#define SPI1_MISO_PIN           PA6     //SPI1_RX (2,0,3)
+#define SPI1_MOSI_PIN           PA7     //SPI1_TX (2,3,3)
 
 
 #define USE_IMU_ICM20689
 #define IMU_ICM20689_ALIGN          CW0_DEG
 #define ICM20689_CS_PIN             PA4
 #define ICM20689_SPI_BUS            BUS_SPI1
-#define ICM20689_EXTI_PIN           PC4
+// #define ICM20689_EXTI_PIN           PC4
 
 // #define USE_IMU_ICM42605
 // #define IMU_ICM42605_ALIGN      CW90_DEG
 // #define ICM42605_CS_PIN         PA4
 // #define ICM42605_SPI_BUS        BUS_SPI1
 
-#define USE_IMU_MPU6000
-#define IMU_MPU6000_ALIGN       CW270_DEG_FLIP
-#define MPU6000_SPI_BUS         BUS_SPI1
-#define MPU6000_CS_PIN          PB11
-#define MPU6000_EXTI_PIN        PB2
+// #define USE_IMU_MPU6000
+// #define IMU_MPU6000_ALIGN       CW270_DEG_FLIP
+// #define MPU6000_SPI_BUS         BUS_SPI1
+// #define MPU6000_CS_PIN          PB11
+// #define MPU6000_EXTI_PIN        PB2
 
 // *************** OSD *****************************
 #define USE_SPI_DEVICE_2
-#define SPI2_SCK_PIN            PB13
-#define SPI2_MISO_PIN           PB14
-#define SPI2_MOSI_PIN           PB15
+#define SPI2_SCK_PIN            PB13  
+#define SPI2_MISO_PIN           PB14     //SPI2_RX (1,3,0)
+#define SPI2_MOSI_PIN           PB15     //SPI2_TX (1,4,0)
 
 #define USE_OSD
 #define USE_MAX7456
@@ -115,9 +115,9 @@
 
 // *************** Internal FLASH **************************
 #define USE_SPI_DEVICE_3
-#define SPI3_SCK_PIN            PB3
-#define SPI3_MISO_PIN           PB4
-#define SPI3_MOSI_PIN           PB5
+#define SPI3_SCK_PIN            PB3     
+#define SPI3_MISO_PIN           PB4     //SPI3_RX (1,2,0)
+#define SPI3_MOSI_PIN           PB5     //SPI3_TX (1,5,0)
 
 #define USE_FLASHFS
 #define USE_FLASH_M25P16
@@ -135,8 +135,8 @@
 // *************** I2C(Baro & I2C) **************************
 #define USE_I2C
 #define USE_I2C_DEVICE_1
-#define I2C1_SCL                PB8
-#define I2C1_SDA                PB9
+#define I2C1_SCL                PB8     //SDA_RX (1,5,1)
+#define I2C1_SDA                PB9     //SDA_TX (1,6,1)
 
 #define USE_BARO
 #define BARO_I2C_BUS            BUS_I2C1
